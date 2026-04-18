@@ -172,7 +172,56 @@ function BuildPage() {
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase leading-none">
           Build your <span className="text-gradient-flame">dream rig.</span>
         </h1>
-        <p className="text-muted-foreground mt-2 text-sm">Five steps. Live pricing. Expert assembly in 7 days.</p>
+        <p className="text-muted-foreground mt-2 text-sm">Start from a preset or build from scratch — fully customizable.</p>
+      </div>
+
+      {/* Presets */}
+      <div className="mb-10">
+        <div className="flex items-end justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <h2 className="font-display text-xl font-bold uppercase">Quick Start Presets</h2>
+            <p className="text-xs text-muted-foreground">One click to load · tweak any part after</p>
+          </div>
+          {activePreset && (
+            <button
+              onClick={() => { setSel({}); setActivePreset(null); }}
+              className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground hover:text-flame"
+            >
+              Clear &amp; start blank
+            </button>
+          )}
+        </div>
+        <div className="grid sm:grid-cols-3 gap-3">
+          {PRESETS.map((p, i) => {
+            const active = activePreset === p.id;
+            return (
+              <button
+                key={p.id}
+                onClick={() => applyPreset(p)}
+                className={`group relative text-left rounded-2xl border p-4 overflow-hidden transition-all hover:-translate-y-1 animate-fade-up ${
+                  active ? "border-flame ring-flame bg-card" : "border-border bg-card hover:border-flame/60"
+                }`}
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${p.accent} opacity-60 pointer-events-none`} />
+                {active && (
+                  <span className="absolute top-3 right-3 z-10 h-6 w-6 rounded-full bg-success text-background grid place-items-center">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                )}
+                <div className="relative">
+                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-flame mb-1">Tier {i + 1}</div>
+                  <div className="font-display text-2xl font-bold uppercase leading-none">{p.name}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{p.tagline}</div>
+                  <div className="font-display text-2xl font-bold mt-4 tabular-nums">{inr(presetTotal(p))}</div>
+                  <div className={`mt-3 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider ${active ? "text-flame" : "text-foreground group-hover:text-flame"} transition-colors`}>
+                    {active ? "Loaded" : "Load preset"} <ChevronRight className="h-3 w-3" />
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Stepper */}
