@@ -115,7 +115,19 @@ const PRESETS: Preset[] = [
 function BuildPage() {
   const [step, setStep] = useState(0);
   const [sel, setSel] = useState<Selections>({});
+  const [activePreset, setActivePreset] = useState<string | null>(null);
   const { add, setOpen } = useCart();
+
+  const applyPreset = (p: Preset) => {
+    const next: Selections = {};
+    (Object.keys(p.picks) as StepKey[]).forEach((k) => { next[k] = findPart(k, p.picks[k]); });
+    setSel(next);
+    setActivePreset(p.id);
+    setStep(0);
+  };
+
+  const presetTotal = (p: Preset) =>
+    (Object.keys(p.picks) as StepKey[]).reduce((s, k) => s + findPart(k, p.picks[k]).price, 0);
 
   const current = STEPS[step];
   const progress = ((step + 1) / STEPS.length) * 100;
