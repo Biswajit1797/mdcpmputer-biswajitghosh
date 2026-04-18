@@ -84,6 +84,34 @@ const STEPS: { key: StepKey; label: string; icon: typeof Cpu; image: string; opt
 
 type Selections = Partial<Record<StepKey, Part>>;
 
+const findPart = (key: StepKey, id: string) => STEPS.find((s) => s.key === key)!.options.find((o) => o.id === id)!;
+
+type Preset = { id: string; name: string; tagline: string; accent: string; picks: Record<StepKey, string> };
+
+const PRESETS: Preset[] = [
+  {
+    id: "budget",
+    name: "Budget Beast",
+    tagline: "1080p high-FPS esports",
+    accent: "from-emerald-500/20 to-emerald-500/5",
+    picks: { case: "case-air", cpu: "cpu-r5", gpu: "gpu-4070", ram: "ram-16", storage: "ssd-1tb" },
+  },
+  {
+    id: "mid",
+    name: "Sweet Spot",
+    tagline: "1440p ultra · streamer ready",
+    accent: "from-flame/30 to-ember/10",
+    picks: { case: "case-glass", cpu: "cpu-r7", gpu: "gpu-4080", ram: "ram-32", storage: "ssd-2tb" },
+  },
+  {
+    id: "ultra",
+    name: "Ultra Flagship",
+    tagline: "4K · creator · no compromise",
+    accent: "from-fuchsia-500/25 to-flame/15",
+    picks: { case: "case-pro", cpu: "cpu-r9", gpu: "gpu-4090", ram: "ram-64", storage: "ssd-4tb" },
+  },
+];
+
 function BuildPage() {
   const [step, setStep] = useState(0);
   const [sel, setSel] = useState<Selections>({});
