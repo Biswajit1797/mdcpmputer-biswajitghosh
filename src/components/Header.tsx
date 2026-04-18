@@ -21,8 +21,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 ml-6 text-sm font-medium">
           <Link to="/" className="hover:text-flame transition-colors">Home</Link>
           <Link to="/shop" className="hover:text-flame transition-colors">Shop</Link>
-          <Link to="/shop" search={{ cat: "GPU" } as never} className="hover:text-flame transition-colors">Components</Link>
-          <Link to="/shop" className="hover:text-flame transition-colors">Build PC</Link>
+          <Link to="/build" className="hover:text-flame transition-colors">Build PC</Link>
           <Link to="/shop" className="hover:text-flame transition-colors">Deals</Link>
         </nav>
 
