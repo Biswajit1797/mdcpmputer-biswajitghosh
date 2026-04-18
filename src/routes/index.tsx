@@ -71,7 +71,7 @@ function HomePage() {
               <Link to="/shop" className="group inline-flex items-center gap-2 h-14 px-7 rounded-xl bg-gradient-flame text-flame-foreground font-black uppercase text-sm tracking-wider hover:scale-105 transition-transform animate-glow-pulse">
                 Shop Deals <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/shop" className="inline-flex items-center gap-2 h-14 px-7 rounded-xl border-2 border-foreground font-black uppercase text-sm tracking-wider hover:bg-foreground hover:text-background transition-colors">
+              <Link to="/build" className="inline-flex items-center gap-2 h-14 px-7 rounded-xl border-2 border-foreground font-black uppercase text-sm tracking-wider hover:bg-foreground hover:text-background transition-colors">
                 Build a PC
               </Link>
             </div>
@@ -207,7 +207,7 @@ function HomePage() {
               Need a <span className="text-gradient-flame">custom rig?</span>
             </h2>
             <p className="opacity-80 mb-6 max-w-md">Tell us your budget. Our experts spec, build & ship a beast within 7 days.</p>
-            <Link to="/shop" className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-gradient-flame text-flame-foreground font-black uppercase text-sm tracking-wider hover:scale-105 transition-transform">
+            <Link to="/build" className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-gradient-flame text-flame-foreground font-black uppercase text-sm tracking-wider hover:scale-105 transition-transform">
               Configure my PC <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
