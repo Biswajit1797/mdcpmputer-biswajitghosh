@@ -136,6 +136,7 @@ function BuildPage() {
 
   const pick = (p: Part) => {
     setSel((cur) => ({ ...cur, [current.key]: p }));
+    setActivePreset(null);
   };
 
   const goNext = () => setStep((s) => Math.min(STEPS.length - 1, s + 1));
