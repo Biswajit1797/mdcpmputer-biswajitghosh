@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Star, Zap, Shield, Truck, RefreshCw, Plus, Minus, Check } from "lucide-react";
-import { getProduct, getRelated, inr } from "@/lib/products";
+import { getProduct, getRelated, inr, type Product } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { ProductCard } from "@/components/ProductCard";
 import { Countdown } from "@/components/Countdown";
@@ -116,7 +116,7 @@ function ProductPage() {
         <div className="mt-20">
           <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase mb-6">Pairs well with</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {related.map((p, i) => <ProductCard key={p.id} product={p} index={i} />)}
+            {related.map((p: Product, i: number) => <ProductCard key={p.id} product={p} index={i} />)}
           </div>
         </div>
       )}
