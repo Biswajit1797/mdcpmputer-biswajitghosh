@@ -1,45 +1,54 @@
-# Conversion Catalyst
+# MD Computers — Conversion Catalyst
 
-https://mdcomputers.in/. This is a website with high traffic, but a very low conversion rate, and the problems that I have identified are:
+A conversion-focused redesign of the [MD Computers](https://mdcomputers.in) e-commerce homepage — a high-traffic PC hardware and gaming retail site with a low conversion rate. This project reimagines the shopping experience with a bold, vibrant "gamer" aesthetic aimed at turning visitors into buyers.
 
-        Weak Value Proposition
+Built and maintained with [Lovable](https://lovable.dev) AI.
 
-        Poor Website UX/UI
+## 🚀 Live Preview
 
-        Lack of Trust Signals
+[mdcpmputer-biswajitghosh.lovable.app](https://mdcpmputer-biswajitghosh.lovable.app)
 
-        Ineffective Call-to-Action (CTA)
+## 🛠 Tech Stack
 
-        Price or Value Mismatch
+- **React** — UI library
+- **TypeScript** — Type-safe JavaScript
+- **Vite** — Build tool & dev server
+- **TanStack Router** — Client-side routing
+- **Tailwind CSS** *(if used — confirm)*
 
-        Complicated Checkout Process
+## ✨ Project Scope
 
-        No Personalization
+- Full site redesign: Home, Category, and Product pages
+- Visual direction: **Bold Gamer (vibrant)**
+- Goal: Improve conversion rate through clearer product presentation, stronger CTAs, and a more engaging visual identity
 
-        Poor Product Presentation
+## 📦 Getting Started
 
-        Lack of Urgency or FOMO
-Redesign this homepage with modern UI/UX, improve conversion, better CTA placement, trust signals, and clean layout, and it must have animations and a very attractive UI/UX so that customer acquisition increases and the conversion rate increases and also work on giving offers to the end customers that can be targeted as 'limited time offer" where the customer will get more engaged, the website must have a dark mode and a light mode option too in the home page which will be a one click toggle and the check out experience must also be very simple and fast so that the customer doesent have to wait for long and when they add items in the cart there will be recommendations to simmiler products and relivent products which the customer will show interest to check out even if they dont have the budget and whrn they click on it then they eill be ofered a combo offer, also add relivent pictures for each product and make the entire website more attractive with good colour combinationa
+Clone the repo and install dependencies:
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://mdcpmputer-biswajitghosh.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0e5f46df-253d-4287-9d84-d154645a1fc0).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+git clone https://github.com/Biswajit1797/mdcpmputer-biswajitghosh.git
+cd mdcpmputer-biswajitghosh
+npm install
 npm run dev
 ```
+
+## 📁 Project Structure
+
+src/
+├── assets/ # Images and static files
+├── components/ # Reusable UI components
+├── hooks/ # Custom React hooks
+├── lib/ # Utility functions
+├── routes/ # Page routes (TanStack Router)
+├── router.tsx # Router configuration
+└── styles.css # Global styles
+
+
+## 🔗 About
+
+This project is part of exploring finance meets tech — built by [Biswajit Ghosh](https://github.com/Biswajit1797), sharing finance & data content under [@decodedbybiswajit](https://instagram.com/decodedbybiswajit).
+
+## 📄 License
+
+This project is currently unlicensed / private use only.
