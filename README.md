@@ -33,16 +33,18 @@ npm install
 npm run dev
 ```
 
-## 📁 Project Structure
+## 🔗 Project Structure
 
+```
 src/
-├── assets/ # Images and static files
-├── components/ # Reusable UI components
-├── hooks/ # Custom React hooks
-├── lib/ # Utility functions
-├── routes/ # Page routes (TanStack Router)
-├── router.tsx # Router configuration
-└── styles.css # Global styles
+├── assets/       # Images and static files
+├── components/   # Reusable UI components
+├── hooks/        # Custom React hooks
+├── lib/          # Utility functions
+├── routes/       # Page routes (TanStack Router)
+├── router.tsx    # Router configuration
+└── styles.css    # Global styles
+```
 
 
 ## 🔗 About
